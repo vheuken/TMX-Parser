@@ -154,3 +154,8 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+
+# more Visual Studio stuff...
+*.vcxprojc
+*.vcxprojc.filters
+*.sln
