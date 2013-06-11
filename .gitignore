@@ -156,6 +156,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 # more Visual Studio stuff...
-*.vcxprojc
-*.vcxprojc.filters
+*.vcxproj
+*.vcxproj.filters
 *.sln
