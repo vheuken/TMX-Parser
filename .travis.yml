@@ -2,8 +2,7 @@ language: cpp
 compiler:
   - gcc
 before_script:
-  - sudo apt-get install libboost-all-dev
+  - sudo apt-get install libboost-test-dev
   - cmake .
 script: 
   - make
-  - make test
