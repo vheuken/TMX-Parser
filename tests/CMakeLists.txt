@@ -1,5 +1,3 @@
-find_package(Boost COMPONENTS libboost-test-dev )
-
 set ( TEST_FILES
       TMXMap_test.cpp
 )
