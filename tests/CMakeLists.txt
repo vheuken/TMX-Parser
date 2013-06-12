@@ -1,5 +1,3 @@
-find_package (Boost COMPONENTS unit_test_framework REQUIRED)
-
 set ( TEST_FILES
       TMXMap_test.cpp
 )
