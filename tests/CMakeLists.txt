@@ -1,5 +1,7 @@
-find_package (Boost COMPONENTS unit_test_framework REQUIRED)
-
+# this if statement is temporary because of an issue with boost on my PC
+if (!WIN32)
+    find_package (Boost COMPONENTS unit_test_framework REQUIRED)
+endif()
 set ( TEST_FILES
       TMXMap_test.cpp
 )
