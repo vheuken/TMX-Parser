@@ -159,3 +159,7 @@ $RECYCLE.BIN/
 *.vcxproj
 *.vcxproj.filters
 *.sln
+
+# CMake test stuff
+Testing/
+CTestTestfile.cmake

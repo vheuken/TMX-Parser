@@ -13,3 +13,7 @@ SET ( SOURCE_FILES
 )
 
 add_library ( ${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES} )
+
+enable_testing()
+
+add_subdirectory ("tests/")
