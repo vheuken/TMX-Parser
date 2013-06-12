@@ -1,4 +1,5 @@
 #define BOOST_TEST_MAIN
+#define BOOST_TEST_MODULE TMXMap
 #if !defined( WIN32 )
     #define BOOST_TEST_DYN_LINK
 #endif
