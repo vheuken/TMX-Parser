@@ -1,0 +1,9 @@
+language: cpp
+compiler:
+  - gcc
+before_script:
+  - sudo apt-get install libboost-all-dev
+  - cmake .
+script: 
+  - make
+  - ctest
