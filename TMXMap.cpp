@@ -30,6 +30,12 @@ void TMXMap::processMap()
 	
 	mapNode = tmxDoc.first_node("map");
 
+	processMapAttributes(mapNode);
+
+}
+
+void TMXMap::processMapAttributes(rapidxml::xml_node<char> * mapNode)
+{
 	version = mapNode->first_attribute("version")->value();
 
 	orientation = mapNode->first_attribute("orientation")->value();

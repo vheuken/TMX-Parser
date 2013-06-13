@@ -40,6 +40,7 @@ private:
 	// Can contain: properties, tileset, layer, objectgroup, imagelayer
 
 	void processMap();
+	void processMapAttributes(rapidxml::xml_node<char> * mapNode);
 
 };
 
