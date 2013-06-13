@@ -4,6 +4,7 @@
 #include <string>
 #include <cstring>
 #include "rapidxml-1.13/rapidxml.hpp"
+#include "TMXData.h"
 
 class TMXLayer
 {
@@ -15,10 +16,14 @@ public:
 	int getWidth() const;
 	int getHeight() const;
 
+	TMXData getData() const;
+
 private:
 	std::string name;
 
 	int width, height;
+
+	TMXData data;
 
 	void processAttributes(rapidxml::xml_node<char> * layerNode);
 };

@@ -26,3 +26,8 @@ int TMXLayer::getHeight() const
 {
 	return height;
 }
+
+TMXData TMXLayer::getData() const
+{
+	return data;
+}

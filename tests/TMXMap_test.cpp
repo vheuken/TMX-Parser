@@ -4,6 +4,7 @@
 #endif
 #include <boost/test/unit_test.hpp>
 #include "../src/TMXMap.h"
+#include "../src/TMXLayer.h"
 
 BOOST_AUTO_TEST_CASE( my_test ) {
 	TMXMap testMap("test_map.tmx");
@@ -27,4 +28,8 @@ BOOST_AUTO_TEST_CASE( my_test ) {
 	BOOST_CHECK_EQUAL(testMap.getLayer(0).getHeight(), 75);
 	BOOST_CHECK_EQUAL(testMap.getLayer(0).getWidth(), 50);
 
+	/*TMXLayer testLayer = testMap.getLayer(0);
+	TMXData testLayerData = testLayer.getData();
+
+	BOOST_CHECK_EQUAL(testLayerData.getNumOfTiles(), 0);*/
 }
