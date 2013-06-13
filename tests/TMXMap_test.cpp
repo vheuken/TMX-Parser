@@ -24,4 +24,7 @@ BOOST_AUTO_TEST_CASE( my_test ) {
 	BOOST_ASSERT(testMap.getLayer(1).getName() == "Tile Layer 2");
 	BOOST_ASSERT(testMap.getLayer(2).getName() == "");
 
+	BOOST_CHECK_EQUAL(testMap.getLayer(0).getHeight(), 75);
+	BOOST_CHECK_EQUAL(testMap.getLayer(0).getWidth(), 50);
+
 }
