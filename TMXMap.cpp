@@ -10,7 +10,7 @@ TMXMap::TMXMap(std::string pathToMapFile)
 void TMXMap::processMap()
 {
 	rapidxml::xml_document<> tmxDoc;
-	std::ifstream tmxFile (pathToMapFile);
+	std::ifstream tmxFile (pathToMapFile.c_str());
 	std::stringstream buffer;
 
 	buffer << tmxFile.rdbuf();
