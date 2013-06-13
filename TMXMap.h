@@ -2,7 +2,10 @@
 #define TMXMAP_H
 
 #include <string>
-
+#include <vector>
+#include <fstream>
+#include <sstream>
+#include <cstring>
 #include "rapidxml-1.13/rapidxml.hpp"
 
 class TMXMap 

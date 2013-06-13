@@ -9,6 +9,8 @@ set ( TEST_FILES
 
 add_executable(tests ${TEST_FILES})
 
-target_link_libraries(tests ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
+target_link_libraries(tests 
+                      ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
+                      "TMX Parser")
 
 add_test(tests tests)
