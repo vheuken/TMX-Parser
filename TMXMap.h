@@ -7,6 +7,7 @@
 #include <sstream>
 #include <cstring>
 #include "rapidxml-1.13/rapidxml.hpp"
+#include "TMXLayer.h"
 
 class TMXMap 
 {
@@ -22,6 +23,7 @@ public:
 	int getTileWidth() const;
 	int getTileHeight() const;
 
+	TMXLayer getLayer(int layerNum) const;
 
 private:
 	std::string pathToMapFile;
@@ -37,10 +39,12 @@ private:
 
 	int tileWidth, tileHeight;
 
-	// Can contain: properties, tileset, layer, objectgroup, imagelayer
+	// Can contain: properties, tileset, objectgroup, 
+	std::vector<TMXLayer> layerList;
 
 	void processMap();
 	void processMapAttributes(rapidxml::xml_node<char> * mapNode);
+	void processMapLayers(rapidxml::xml_node<char> * mapNode);
 
 };
 

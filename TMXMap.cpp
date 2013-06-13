@@ -32,6 +32,8 @@ void TMXMap::processMap()
 
 	processMapAttributes(mapNode);
 
+	processMapLayers(mapNode);
+
 }
 
 void TMXMap::processMapAttributes(rapidxml::xml_node<char> * mapNode)
@@ -46,6 +48,27 @@ void TMXMap::processMapAttributes(rapidxml::xml_node<char> * mapNode)
 	tileWidth = atoi(mapNode->first_attribute("tilewidth")->value());
 	tileHeight = atoi(mapNode->first_attribute("tileheight")->value());
 
+}
+
+void TMXMap::processMapLayers(rapidxml::xml_node<char> * mapNode)
+{
+	rapidxml::xml_node<char> * currentLayerNode;
+
+	currentLayerNode = mapNode->first_node("layer");
+	
+	while (currentLayerNode != NULL)
+	{
+		TMXLayer layer(currentLayerNode);
+
+		layerList.push_back(layer);
+
+		currentLayerNode = currentLayerNode->next_sibling("layer");
+	}
+}
+
+TMXLayer TMXMap::getLayer(int layerNum) const
+{
+	return layerList.at(layerNum);
 }
 
 std::string TMXMap::getVersion() const

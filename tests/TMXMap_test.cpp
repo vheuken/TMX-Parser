@@ -8,9 +8,9 @@
 BOOST_AUTO_TEST_CASE( my_test ) {
 	TMXMap testMap("test_map.tmx");
 
-	BOOST_ASSERT(testMap.getVersion().compare("1.0") == 0);
+	BOOST_ASSERT(testMap.getVersion() == "1.0");
 
-	BOOST_ASSERT(testMap.getOrientation().compare("orthogonal") == 0);
+	BOOST_ASSERT(testMap.getOrientation() == "orthogonal");
 
 	BOOST_CHECK_EQUAL(testMap.getWidth(), 50);
 
@@ -20,4 +20,5 @@ BOOST_AUTO_TEST_CASE( my_test ) {
 
 	BOOST_CHECK_EQUAL(testMap.getTileHeight(), 32);
 
+	BOOST_ASSERT(testMap.getLayer(0).getName() == "Tile Layer 1");
 }
