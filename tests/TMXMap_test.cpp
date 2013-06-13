@@ -3,7 +3,7 @@
     #define BOOST_TEST_DYN_LINK
 #endif
 #include <boost/test/unit_test.hpp>
-#include "../TMXMap.h"
+#include "../src/TMXMap.h"
 
 BOOST_AUTO_TEST_CASE( my_test ) {
 	TMXMap testMap("test_map.tmx");
