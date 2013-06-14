@@ -1,4 +1,7 @@
-set(Boost_USE_STATIC_LIBS ON)
+if (WIN32)
+	set(Boost_USE_STATIC_LIBS ON)
+endif()
+
 include_directories(${Boost_INCLUDE_DIR})
 find_package (Boost COMPONENTS unit_test_framework REQUIRED)
 
