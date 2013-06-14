@@ -1,7 +1,6 @@
-# this if statement is temporary because of an issue with boost on my PC
-if (UNIX)
-    find_package (Boost COMPONENTS unit_test_framework REQUIRED)
-endif()
+set(Boost_USE_STATIC_LIBS ON)
+include_directories(${Boost_INCLUDE_DIR})
+find_package (Boost COMPONENTS unit_test_framework REQUIRED)
 
 set ( TEST_FILES
       TMXMap_test.cpp
